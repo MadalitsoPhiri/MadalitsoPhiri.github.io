@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Madalitso Phiri · Résumé</title>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: Letter; margin: 0.42in 0.5in 0.4in; }
+    :root {
+      --ink: #1d1d1b; --ink-2: #5d5c58; --ink-3: #8f8e89; --rule: #e2e0dc;
+      --accent: #d7332a; --accent-soft: #fbe2df; --tint: #f4f3f0;
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; background: #fff; color: var(--ink); font: 9.1pt/1.36 'Figtree', sans-serif; }
+    a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 2px; }
+    h1, h2, h3, p, ul { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    b { font-weight: 600; }
+
+    /* Header */
+    .head { display: grid; grid-template-columns: 74px 1fr auto; gap: 18px; align-items: center;
+            padding: 13px 18px; border-radius: 16px; background: var(--tint); }
+    .head img { width: 74px; height: 74px; border-radius: 50%; object-fit: cover; filter: grayscale(1); box-shadow: 0 0 0 3px #fff; }
+    .head h1 { font-size: 23pt; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+    .head h1 .dot { color: var(--accent); }
+    .head .role { margin-top: 5px; font-size: 9.6pt; white-space: nowrap; color: var(--ink-2); }
+    .head .role b { color: var(--ink); }
+    .contact { font-size: 8.6pt; line-height: 1.62; text-align: right; white-space: nowrap; }
+    .contact a { text-decoration: none; }
+    .contact a.web { color: var(--accent); font-weight: 600; }
+    .contact .wa { color: var(--ink-3); font-size: 8.2pt; }
+    .contact .web a { color: var(--accent); font-weight: 600; }
+
+    /* Sections */
+    h2 { display: flex; align-items: center; gap: 10px; margin: 13px 0 7px;
+         font-size: 8.5pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+    h2::after { content: ''; flex: 1; border-top: 1px solid var(--rule); }
+    .summary { color: var(--ink-2); font-size: 9.4pt; }
+    .summary b { color: var(--ink); }
+
+    /* Jobs */
+    .job { padding: 7px 0 7px; border-top: 1px solid var(--rule); }
+    .job:first-of-type { border-top: 0; padding-top: 0; }
+    .job__top { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; align-items: center; }
+    .logos { display: flex; align-items: center; gap: 8px; height: 20px; margin-bottom: 2px; }
+    .logos img, .logos .mono { display: block; width: auto; }
+    .mono { background: var(--ink); -webkit-mask: var(--logo) left center / contain no-repeat; mask: var(--logo) left center / contain no-repeat; }
+    .sep { color: var(--ink-3); font-weight: 300; font-size: 13pt; line-height: 1; }
+    .job h3 { font-size: 10.6pt; font-weight: 600; }
+    .job h3 span { color: var(--ink-2); font-weight: 500; }
+    .when { text-align: right; font-size: 8.8pt; color: var(--ink-2); white-space: nowrap; }
+    .when b { color: var(--accent); }
+    .meta { grid-column: 1 / -1; font-size: 8.8pt; color: var(--ink-3); }
+    .job ul { margin-top: 3px; }
+    .job li, .list li { position: relative; padding-left: 13px; margin-top: 1.5px; }
+    .job li::before, .list li::before { content: ''; position: absolute; left: 2px; top: .58em; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+    .links { margin-top: 3px; font-size: 8.8pt; color: var(--ink-2); }
+    .links b { color: var(--ink); }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: 104px 1fr; gap: 3px 14px; }
+    .skills dt { color: var(--ink-3); font-weight: 500; }
+    .skills dd { margin: 0; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+    .block { break-inside: auto; }
+    .job__top, .logos, h2 { break-after: avoid; }
+    .job li, .list li, .skills dt, .skills dd, .edu li, .links { break-inside: avoid; }
+    .job ul { orphans: 2; widows: 2; }
+    .edu li { margin-bottom: 3px; }
+    .edu small { display: block; color: var(--ink-2); font-size: 8.8pt; }
+    .tag { display: inline-block; padding: 1px 7px; margin-right: 3px; border-radius: 99px; font-size: 8pt; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+    .muted { color: var(--ink-2); }
+  </style>
+</head>
+<body>
+
+<header class="head">
+  <img src="../images/profile.jpg" alt="" />
+  <div>
+    <h1>Madalitso Phiri<span class="dot">.</span></h1>
+    <p class="role"><b>Full Stack Developer</b> · 6+ years · React, NestJS, React Native</p>
+  </div>
+  <div class="contact">
+    <a href="mailto:Madalitso.phiri150@gmail.com">Madalitso.phiri150@gmail.com</a><br />
+    <a href="tel:+27719480084">+27 71 948 0084</a> · <a href="tel:+260978303127">+260 97 830 3127</a><br />
+    <span class="wa">Both on WhatsApp</span><br />
+    <a class="web" href="https://madalitsophiri.github.io">madalitsophiri.github.io</a> · <a href="https://www.linkedin.com/in/madalitso-phiri-1a09b719a/">LinkedIn</a> · <a href="https://github.com/MadalitsoPhiri">GitHub</a>
+  </div>
+</header>
+
+<h2>Profile</h2>
+<p class="summary">
+  Full stack developer with <b>6+ years of experience</b> (since 2020) building production web apps, React Native mobile apps
+  and the APIs behind them, mostly remotely for startups in Canada and Zambia. I've led development on a customer loyalty
+  platform, led a mobile team through a Swift-to-React-Native rebuild, and split a GIS billing platform into independently
+  deployed products. I own features end to end, from database and API to app store release, and use AI tooling deliberately
+  to move faster without lowering the bar on review.
+</p>
+
+<h2>Experience</h2>
+
+<section class="job">
+  <div class="logos"><img src="../images/logos/kindo.svg" alt="Kindo" style="height:18px" /><span class="sep">|</span><b style="font-size:10pt">MapBilling</b></div>
+  <div class="job__top">
+    <h3>Full Stack Developer <span>· Kindo Advertising Limited</span></h3>
+    <p class="when">Sep 2025 – <b>Present</b></p>
+    <p class="meta">Remote · Part-time · Zambia</p>
+  </div>
+  <ul>
+    <li>One of two core developers on <b>MapBilling</b>, a GIS-powered platform for water utilities, waste collectors and real estate agencies, with web dashboards, field apps and customer payment apps.</li>
+    <li>Split a shared <b>NestJS</b> backend and <b>React</b> web app into separate water, waste and real estate apps, each with its own <b>PostgreSQL</b> database (Prisma) and <b>Cloud Build</b> pipeline to <b>Google Cloud Run</b>; wrote the per-product data migration tool.</li>
+    <li>Built Map Estates features: buyer sales stages, property notes and attachments, and a public <b>Mapbox</b> property map with nearby listings and directions.</li>
+    <li>Hardened authentication and token refresh, sped up the heaviest list endpoints, seeded the <b>Playwright</b> end-to-end test server, and contributed to the <b>Expo</b> apps.</li>
+    <li>Built a <b>Claude Code</b> multi-agent workflow: the main model plans and reviews, smaller models implement from written specs, tasks are routed by measured cost, and money, auth, schema and deploy work stays under direct review.</li>
+  </ul>
+  <p class="links"><b>Live:</b> <a href="https://realestate.mapbilling.com">Map Estates</a> · <a href="https://water.mapbilling.com">Water</a> · <a href="https://garbage.mapbilling.com">Waste</a> · Map Estates <a href="https://play.google.com/store/apps/details?id=com.mapbilling.realestate">Android</a> · GarbageCo <a href="https://play.google.com/store/apps/details?id=com.garbagecopay">Android</a>, <a href="https://apps.apple.com/zm/app/garbageco/id6759239159">iOS</a></p>
+</section>
+
+<section class="job">
+  <div class="logos"><img src="../images/logos/sticky.svg" alt="Sticky" style="height:20px" /></div>
+  <div class="job__top">
+    <h3>Full Stack Developer <span>· Stickycards Co.</span></h3>
+    <p class="when">Jan 2025 – Feb 2026</p>
+    <p class="meta">Remote · Canada</p>
+  </div>
+  <ul>
+    <li><b>Led development</b> of a customer service tool with real-time chat and third-party integrations, powering a customer loyalty program.</li>
+    <li>Architected and maintained the <b>NestJS</b> backend and <b>React + TypeScript</b> frontend; built the customer analytics and loyalty dashboard.</li>
+    <li>Cut message latency by <b>40%</b> with <b>Socket.io</b>, and raised user engagement by <b>25%</b> with a responsive <b>Tailwind CSS</b> UI.</li>
+  </ul>
+  <p class="links"><b>Live:</b> <a href="https://www.sosticky.io">sosticky.io</a></p>
+</section>
+
+<section class="job">
+  <div class="logos"><span class="mono" style="--logo:url(../images/logos/bptn.svg);height:16px;aspect-ratio:2263/411"></span><span class="sep">|</span><span class="mono" style="--logo:url(../images/logos/obsidi.svg);height:14px;aspect-ratio:2394/454"></span></div>
+  <div class="job__top">
+    <h3>Full Stack Mobile Developer <span>· BPTN</span></h3>
+    <p class="when">Aug 2022 – Jan 2025</p>
+    <p class="meta">Remote · Canada</p>
+  </div>
+  <ul>
+    <li>Built core features of the <b>OBSIDI</b> career and mentorship app for iOS and Android (<b>5K+ downloads</b>) in <b>React Native</b>, using custom hooks to keep logic out of screens.</li>
+    <li>Kept the UX consistent across platforms with <b>styled-components</b>; cut code duplication by <b>35%</b>.</li>
+    <li>Coordinated App Store and Google Play releases, release cycles and A/B tests.</li>
+  </ul>
+  <p class="links"><b>Live:</b> <a href="https://app.obsidi.com">Web</a> · <a href="https://apps.apple.com/us/app/obsidi/id1645597175">iOS</a> · <a href="https://play.google.com/store/apps/details?id=com.obsidi.android">Android</a></p>
+</section>
+
+<section class="job">
+  <div class="logos"><img src="../images/logos/lendbox.svg" alt="Lendbox" style="height:17px" /></div>
+  <div class="job__top">
+    <h3>Mobile Developer <span>· Lendbox</span></h3>
+    <p class="when">Jun 2022 – Aug 2022</p>
+    <p class="meta">On-site · Lusaka, Zambia · Part-time</p>
+  </div>
+  <ul>
+    <li>Full stack mobile development on <b>Lendbox</b>, an AI-powered loan management platform for lenders and microfinance institutions (web, Android and iOS).</li>
+    <li>Worked in the on-site product team using <b>Sentry</b> for error monitoring and <b>Asana</b> for delivery.</li>
+  </ul>
+  <p class="links"><b>Live:</b> <a href="https://lendbox.io/en">lendbox.io</a> · <a href="https://apps.apple.com/zm/app/lendbox-ai-loan-management/id1610722829">iOS</a> · <a href="https://play.google.com/store/apps/details?id=com.lendbox.lendbox2">Android</a></p>
+</section>
+
+<section class="job">
+  <div class="logos"><img src="../images/logos/sparknspur-icon.svg" alt="" style="height:20px" /><span class="mono" style="--logo:url(../images/logos/sparknspur.svg);height:12px;aspect-ratio:1877/340;margin-left:-3px"></span><span class="sep" style="margin-left:6px">|</span><img src="../images/logos/propzi.svg" alt="Propzi" style="height:22px" /></div>
+  <div class="job__top">
+    <h3>Full Stack Developer <span>· SparknSpur Co.</span></h3>
+    <p class="when">Oct 2020 – May 2022</p>
+    <p class="meta">Remote · Canada</p>
+  </div>
+  <ul>
+    <li><b>Led the mobile team</b> rebuilding <b>Propzi</b>, moving from Swift to <b>React Native</b> and halving codebase maintenance.</li>
+    <li>Built and deployed a <b>Django</b> machine-learning service for real estate price prediction, handling <b>10K+</b> API requests a day.</li>
+    <li>Built Sparky, an embeddable real-time chat widget (React, Webpack, Babel, Node/NestJS) running on <b>500+</b> partner sites with <b>&lt;100 ms</b> delivery over Socket.io.</li>
+    <li>Mentored junior developers on React Native best practices and code review.</li>
+  </ul>
+  <p class="links"><b>Live:</b> <a href="https://www.propzi.com/">propzi.com</a></p>
+</section>
+
+<section class="job">
+  <div class="job__top">
+    <h3>Full Stack Developer <span>· Multinet</span></h3>
+    <p class="when">Jul 2020 – Oct 2020</p>
+    <p class="meta">Remote</p>
+  </div>
+  <ul>
+    <li>Built a VoIP mobile app combining chat with cell-network calling: prototyped in React Native, then rebuilt in <b>Kotlin</b> for SIP trunking, with a <b>Node.js</b> backend for call routing and users, supporting 100+ concurrent users.</li>
+  </ul>
+</section>
+
+<section class="job">
+  <div class="logos"><img src="../images/logos/greenwebb.svg" alt="Greenwebb" style="height:24px" /></div>
+  <div class="job__top">
+    <h3>Full Stack Developer <span>· GreenWebb</span></h3>
+    <p class="when">Jan 2020 – Jul 2020</p>
+    <p class="meta">Startup</p>
+  </div>
+  <ul>
+    <li>Built a <b>PHP/MySQL</b> web app with authentication and data management, a mobile-first frontend, and Orgsocial, a native <b>Android</b> messaging app (Java, Firebase).</li>
+  </ul>
+</section>
+
+<div class="block">
+  <h2>Freelance · Upwork</h2>
+  <p class="muted" style="margin-bottom:3px">Short fixed-price contracts in 2022 and 2025. 5 completed, rated 4.4–5.0 where reviewed.</p>
+  <ul class="list">
+    <li>First version of a <b>NestJS</b> backend for a client product, and updates to an existing <b>React</b> web app (2025).</li>
+    <li>An API endpoint test suite with <b>Mocha</b> and <b>Chai</b>, <b>React Native</b> features for an education app, and a <b>Node.js</b> service syncing two distributed data stores (2022).</li>
+  </ul>
+</div>
+
+<div class="block">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Frontend</dt><dd>React, Next.js, TypeScript, Vue.js, Tailwind CSS, styled-components, Mapbox GL, Webpack, Vite</dd>
+    <dt>Backend</dt><dd>Node.js, NestJS, Express, Django, GraphQL (Apollo), REST, Socket.io, PHP, microservices</dd>
+    <dt>Mobile</dt><dd>React Native, Expo, Swift/SwiftUI, Kotlin, Java, App Store and Google Play releases</dd>
+    <dt>Data &amp; GIS</dt><dd>PostgreSQL, Prisma, MongoDB, Redis, Firebase (Firestore, Realtime DB, Cloud Functions), Turf.js, GeoJSON</dd>
+    <dt>Cloud &amp; DevOps</dt><dd>Google Cloud (Cloud Run, Cloud Build, Cloud SQL), AWS (EC2, Lambda, S3, RDS), Docker, Nginx, Linux, CI/CD</dd>
+    <dt>Testing</dt><dd>Jest, Vitest, Playwright, Cypress, Mocha, Chai</dd>
+    <dt>AI tooling</dt><dd>Claude Code (Opus, Sonnet, Haiku), custom subagents and skills, git worktrees</dd>
+    <dt>Systems</dt><dd>Rust, C/C++</dd>
+  </dl>
+</div>
+
+<div class="two">
+  <div class="block">
+    <h2>Education</h2>
+    <ul class="edu">
+      <li><b>FIA Diploma in Accountancy &amp; Business</b><small>Zabtuc College of Business · 2019</small></li>
+      <li><b><a href="https://freecodecamp.org/certification/fccc343da18-dcc1-48c2-b315-11564ea8f4c0/javascript-algorithms-and-data-structures">JavaScript Algorithms &amp; Data Structures</a></b><small>freeCodeCamp · 2020 · 300 hours</small></li>
+      <li><b><a href="https://freecodecamp.org/certification/fccc343da18-dcc1-48c2-b315-11564ea8f4c0/responsive-web-design">Responsive Web Design</a></b><small>freeCodeCamp · 2020</small></li>
+      <li><b>Munali Secondary School</b><small>2012 – 2014</small></li>
+    </ul>
+  </div>
+  <div class="block">
+    <h2>Off the clock</h2>
+    <p class="muted">I've long been drawn to systems engineering. I started learning Rust before AI coding tools came along, and AI has since unlocked a lot of fun hobby projects: customising Linux distros and researching how operating systems are built.</p>
+    <p style="margin-top:6px"><span class="tag">Rust</span><span class="tag">Linux distros</span><span class="tag">OS development</span></p>
+  </div>
+</div>
+
+</body>
+</html>

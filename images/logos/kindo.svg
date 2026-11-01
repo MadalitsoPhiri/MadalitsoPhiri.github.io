@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 94" role="img" aria-label="Kindo">
+  <!-- Rebuilt from the original logo's measured geometry -->
+  <path fill="#eb2f25" d="M2 26H20V49L36 26H57L34.8 57.5L59.6 92H38L20 67.2V92H2Z"/>
+  <path fill="#fd741a" d="M67 26H72.5L112 62.8V26H125V92H122.6L86 58.1V92H67Z"/>
+  <path fill="#24a3df" fill-rule="evenodd" d="M124.5 26H153A32 33 0 0 1 153 92H124.5ZM144 39V79H150A19 20 0 0 0 150 39Z"/>
+  <path fill="#86b41f" fill-rule="evenodd" d="M185 58a36 34 0 1 0 72 0a36 34 0 1 0-72 0ZM202 59a19 18 0 1 0 38 0a19 18 0 1 0-38 0Z"/>
+  <rect fill="#131314" x="52" y="26" width="16" height="66"/>
+  <circle fill="#323232" cx="59.5" cy="10" r="8"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="63 20 48 78" role="img" aria-label="Spark&amp;Spur">
+  <!-- Rebuilt from the Spark&Spur app icon's measured geometry -->
+  <defs><clipPath id="sns-cut"><polygon points="60,63 84,61.6 111,59.4 120,59.4 120,100 60,100"/></clipPath></defs>
+  <line x1="98.4" y1="29.1" x2="72.5" y2="55.9" stroke="#f2931f" stroke-width="14.6" stroke-linecap="round"/>
+  <line x1="101.5" y1="62" x2="75" y2="88.5" stroke="#0c96ad" stroke-width="15.4" stroke-linecap="round" clip-path="url(#sns-cut)"/>
+  <path fill="#ca4545" d="M84 60.4 Q93 56 100.5 54.6 Q106.5 54 108.8 57.4 L109.2 58.6 Z"/>
+</svg>
