@@ -463,3 +463,21 @@ summary:hover { box-shadow: 0 0 0 1px var(--accent) inset; }
 .contact__phones { margin-top: 22px; font-size: 14px; color: var(--ink-2); }
 .contact__phones a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; margin: 0 4px; }
 .contact__phones span { color: var(--ink-3); }
+
+/* Logo strip: endless scroll. The list is cloned once in script.js and the track moves by half its width. */
+.marquee { overflow: hidden; margin: 0 -72px;
+  -webkit-mask: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+          mask: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.marquee__track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee .companies__list { flex-wrap: nowrap; justify-content: flex-start; gap: 0; }
+.marquee .companies__list li { padding: 0 36px; flex: none; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (max-width: 1000px) { .marquee { margin: 0 -40px; } }
+@media (max-width: 640px) { .marquee { margin: 0 -20px; } .marquee .companies__list li { padding: 0 22px; } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { -webkit-mask: none; mask: none; margin: 0; }
+  .marquee__track { animation: none; width: auto; }
+  .marquee .companies__list { flex-wrap: wrap; justify-content: center; gap: 24px 0; }
+  .marquee .companies__list + .companies__list { display: none; }
+}

@@ -21,6 +21,14 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch (e) {}
 });
 
+// Logo strip: clone the list once so the scroll loops without a gap.
+document.querySelectorAll('.marquee__track').forEach((track) => {
+  const clone = track.firstElementChild.cloneNode(true);
+  clone.setAttribute('aria-hidden', 'true');
+  clone.querySelectorAll('img').forEach((img) => { img.alt = ''; });
+  track.appendChild(clone);
+});
+
 // Copy email
 const toast = document.getElementById('toast');
 const showToast = (msg) => {
