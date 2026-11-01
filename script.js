@@ -1,7 +1,7 @@
 // Profile links. Leave a value empty to hide everything that points to it.
 const LINKS = {
   github: 'https://github.com/MadalitsoPhiri',
-  upwork: '', // e.g. 'https://www.upwork.com/freelancers/~0123456789abcdef'
+  upwork: 'https://www.upwork.com/freelancers/~014a5ea5e7810e201f',
 };
 
 document.querySelectorAll('[data-link]').forEach((el) => {
